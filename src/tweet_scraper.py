@@ -18,4 +18,8 @@ def get_tweets():
 def filter_tweets(tweets):
     return [tweet.tweet for tweet in tweets if "#" not in tweet.tweet]
 
-print(filter_tweets(get_tweets()))
+
+if __name__ == "__main__":
+    cena_tweets = get_tweets()
+    filtered_cena_tweets = filter_tweets(cena_tweets)
+    print(filtered_cena_tweets)
